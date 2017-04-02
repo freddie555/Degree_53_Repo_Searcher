@@ -12,11 +12,10 @@ export default React.createClass({
     };
   },
 
-  showResults () {
-    const that = this;
+  showResults (searchTerm) {
     this.setState({
       resultsVisible: true,
-      searchTerm: that.searchTerm
+      searchTerm: searchTerm
     });
   },
 

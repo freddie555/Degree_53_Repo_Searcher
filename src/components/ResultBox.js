@@ -8,28 +8,29 @@ const _ResultBox = React.createClass({
 
   getInitialState () {
     return {
-      selectedRepoNameName: null,
+      selectedRepo: null,
       repo: null
     };
   },
 
-  handleResultClick (repo) {
-    this.setState({ selectedRepoName: repo.name, repo });
+  handleResultClick (repo, key) {
+    this.setState({ selectedRepo: key, repo });
   },
 
   handleButtonClick () {
-    this.setState({ selectedRepoName: null, repo: null });
+    this.setState({ selectedRepo: null, repo: null });
   },
 
   renderResults () {
     const that = this;
+    console.log(this.props.results[0], '0');
     return this.props.results.map((repo, i) => {
       return (
         <Result
-          selected={repo.name === that.state.selectedRepoName}
+          selected={i === that.state.selectedRepo}
           key={i}
           repo={repo}
-          onClick={() => { that.handleResultClick(repo); }}
+          onClick={() => { that.handleResultClick(repo, i); }}
         />
       );
     });

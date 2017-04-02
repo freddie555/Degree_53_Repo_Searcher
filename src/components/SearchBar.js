@@ -19,7 +19,7 @@ const _SearchBar = React.createClass({
 
   handleSubmit () {
     this.props.searchRepos(this.state.searchTerm);
-    this.props.showResults();
+    this.props.showResults(this.state.searchTerm);
   },
 
   render () {
