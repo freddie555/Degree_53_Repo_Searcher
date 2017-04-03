@@ -38,7 +38,7 @@ const _ResultBox = React.createClass({
 
   renderDetails () {
     return (
-      <div className='selection'>
+      <div className='box'>
         <DetailBox repo={this.state.repo} />
         <button onClick={() => { this.handleButtonClick(); }}>Close Profile</button>
       </div>

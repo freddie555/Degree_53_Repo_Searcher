@@ -28,3 +28,7 @@
 .result {
   display: inline;
 }
+
+.detail-name {
+  font-size: 20px
+}

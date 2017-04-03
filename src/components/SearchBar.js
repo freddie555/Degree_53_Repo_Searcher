@@ -25,11 +25,11 @@ const _SearchBar = React.createClass({
   render () {
     return (
       <div>
-        <div className="panel-block">
-          <p className="control has-icon">
-            <input className="input" type="text" placeholder="Enter a repo name to start your search..." value={this.state.searchTerm} onChange={this.handleChange}/>
-            <span className="icon is-small">
-              <i className="fa fa-search"></i>
+        <div className='panel-block'>
+          <p className='control has-icon'>
+            <input className='input' type='text' placeholder='Enter a repo name to start your search...' value={this.state.searchTerm} onChange={this.handleChange} />
+            <span className='icon is-small'>
+              <i className='fa fa-search'></i>
             </span>
           </p>
           <p>
