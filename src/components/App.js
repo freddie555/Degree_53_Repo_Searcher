@@ -22,9 +22,16 @@ export default React.createClass({
   render () {
     return (
       <div>
+        <nav className="panel">
+          <p className="panel-heading">
+            Repositories
+          </p>
         <SearchBar showResults={this.showResults} />
         {this.state.resultsVisible && <ResultBox searchTerm={this.state.searchTerm} />}
+      </nav>
       </div>
+
+
     );
   }
 });

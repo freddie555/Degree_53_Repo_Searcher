@@ -1,11 +1,12 @@
 import React from 'react';
 
 export default (props) => {
-  const classes = props.selected ? 'bold' : '';
-  console.log('in profile');
   return (
-    <li onClick={props.onClick} className={classes}>
-      <i className='fa fa-user'></i> {props.repo.name} created by {props.repo.owner.login}
-    </li>
+    <a className="panel-block is-active" onClick={props.onClick}>
+      <span className="panel-icon">
+        <i className="fa fa-book"></i>
+      </span>
+      {props.repo.name} created by {props.repo.owner.login} at {props.repo.created_at}
+    </a>
   );
 };
